@@ -9,7 +9,7 @@ interface Props {
 const {
   title = "Bodegas Vaschetti | Vinos de Mendoza en Argentina",
   description = "Bodegas Vaschetti: Tradición vitivinícola argentina desde 1916. Vinos de mesa por mayor con el corazón de Mendoza y el centro logístico histórico de Rosario. Honramos el legado de Augusto y Renato Vaschetti S.A.C.I.I.F. con un compromiso de calidad y suministro para su negocio. Hable con nuestro agente IA.",
-  image = "/images/og-image.jpg",
+  image = "/assets/vaschetti-logo-share.jpg",
   url = Astro.url
 } = Astro.props;
 
@@ -22,8 +22,7 @@ const ogDescription = "Tradición y calidad: Vinos argentinos por mayor desde 19
 const siteName = "Bodegas Vaschetti";
 const locale = "es_AR";
 
-// Twitter handle (placeholder)
-const twitterSite = "@YourCompanyName";
+// No Twitter account available — omit twitter:site. Use Instagram in JSON-LD sameAs instead.
 ---
 
 <!doctype html>
@@ -50,15 +49,26 @@ const twitterSite = "@YourCompanyName";
     <meta property="og:locale" content={locale} />
     
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content={twitterSite} />
-    <meta name="twitter:title" content={ogTitle} />
-    <meta name="twitter:description" content={ogDescription} />
-    <meta name="twitter:image" content={image} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- No twitter:site since there is no Twitter account for the brand -->
+  <meta name="twitter:title" content={ogTitle} />
+  <meta name="twitter:description" content={ogDescription} />
+  <meta name="twitter:image" content={image} />
     
     <!-- Fonts -->
     <link rel="stylesheet" href="/styles/fonts.css" />
     
+    <!-- Structured data: include Instagram in sameAs for search engines -->
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": siteName,
+        "url": url,
+        "sameAs": ["https://www.instagram.com/bodegasvaschetti"]
+      })}
+    </script>
+
     <style is:global>
       body {
         font-family: 'FrizQuadrataStd', serif;
