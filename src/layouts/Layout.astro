@@ -1,0 +1,80 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  url?: string;
+}
+
+const {
+  title = "Bodegas Vaschetti | Vinos Mayoristas B2B en Argentina",
+  description = "Bodegas Vaschetti: Tradición vitivinícola argentina desde 1916. Proveedores mayoristas B2B de vinos de mesa con el corazón de Mendoza y el centro logístico histórico de Rosario. Honramos el legado de Augusto y Renato Vaschetti S.A.C.I.I.F. con un compromiso de calidad y suministro para su negocio. Hable con nuestro agente IA.",
+  image = "/assets/vaschetti-logo-share.jpg",
+  url = "https://www.bodegasvaschetti.com.ar/",
+} = Astro.props;
+
+// Keywords for SEO
+const keywords = "vino, mayorista, B2B, bodegas, distribuidor, Vaschetti, Mendoza, Rosario, Tinto Abocado, Vino de Mesa, vino argentino";
+
+// Open Graph specific content
+const ogTitle = "Bodegas Vaschetti | Vinos Mayoristas B2B";
+const ogDescription = "Tradición y calidad: Proveedores mayoristas B2B de vinos argentinos desde 1916. Centro logístico Rosario.";
+const siteName = "Bodegas Vaschetti";
+const locale = "es_AR";
+
+// Twitter handle (placeholder)
+const twitterSite = "@YourCompanyName";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={url} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogDescription} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content={locale} />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content={twitterSite} />
+    <meta name="twitter:title" content={ogTitle} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={image} />
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="/styles/fonts.css" />
+    
+    <style>
+      body {
+        font-family: 'FrizQuadrataStd', serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'TrajanPro', serif;
+      }
+      .logo {
+        max-width: 200px;
+        width: 100%;
+        height: auto;
+        margin: 2rem auto 0;
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

@@ -1,31 +1,10 @@
 ---
 // Under Construction page for Vinos Vaschetti
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Bodegas Vaschetti - La tradición que une a Mendoza y Rosario" />
-    <title>Bodegas Vaschetti - En Construcción</title>
-    <link rel="stylesheet" href="/styles/fonts.css" />
-    <style>
-      body {
-        font-family: 'FrizQuadrataStd', serif;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: 'TrajanPro', serif;
-      }
-      .logo {
-        max-width: 200px;
-        width: 100%;
-        height: auto;
-        margin: 2rem auto 0;
-      }
-    </style>
-  </head>
-  <body class="min-h-screen flex items-center justify-center bg-white">
+<Layout>
+  <div class="min-h-screen flex items-center justify-center bg-white">
     <div class="text-center px-4">
       <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
         Estamos trabajando para ti.
@@ -35,5 +14,5 @@
       </p>
       <img src="/images/vaschetti-logo.svg" alt="Vaschetti" class="logo" />
     </div>
-  </body>
-</html>
+  </div>
+</Layout>
