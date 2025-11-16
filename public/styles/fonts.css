@@ -1,0 +1,28 @@
+/* Vaschetti Website - Font Declarations */
+
+/* Trajan Pro Bold - For titles */
+@font-face {
+  font-family: 'TrajanPro';
+  src: url('/fonts/TrajanPro-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Friz Quadrata Std - Regular */
+@font-face {
+  font-family: 'FrizQuadrataStd';
+  src: url('/fonts/FrizQuadrataStd.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Friz Quadrata Std - Bold */
+@font-face {
+  font-family: 'FrizQuadrataStd';
+  src: url('/fonts/FrizQuadrataStd-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
