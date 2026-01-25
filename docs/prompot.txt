@@ -1,0 +1,4 @@
+Bueno quiero que me hagas un prompt para github copilot en modo PLAN para que cree el plan de la primera versión de la pagina. Yo lo que hice por mi parte fue copiar y pegar otra web astro que tenia (Vaschetti), borrar el contenido de index.astro y pegarle el que hizo Stitch. Hay que pedirle que planifique hacer varias cosas:
+* Separar el layout del contenido. Hay ya un layout.astro se puede utilizar pero no perder lo que hizo stitch y modificar todo el contenido SEO para que no haya nada 
+* Extraer algunas cosas como componentes, como el header y el footer.
+* 

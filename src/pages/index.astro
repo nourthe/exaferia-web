@@ -1,18 +1,738 @@
 ---
 // Under Construction page for Vinos Vaschetti
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-  <div class="min-h-screen flex items-center justify-center bg-white">
-    <div class="text-center px-4">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-        El vino con corazón mendocino y alma rosarina.
-      </h1>
-      <p class="text-xl md:text-2xl text-gray-700 mb-4">
-        El espíritu de Vaschetti vuelve a casa. Estamos restaurando una tradición que merece la familia argentina y el comercio que confía en la historia. Nuestro sitio estará disponible muy pronto, acompañando el relanzamiento oficial de la marca.
-      </p>
-      <img src="/images/vaschetti-logo.svg" alt="Vaschetti" class="logo" />
-    </div>
-  </div>
-</Layout>
+<!doctype html>
+<html class="scroll-smooth" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      EXA Región Centro | Primera Expo Industrial, Comercial e Hidrovía
+    </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
+    ></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1a365d",
+              secondary: "#ff6b00",
+              "background-light": "#ffffff",
+              "background-dark": "#0a101e",
+            },
+            fontFamily: {
+              display: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem",
+              "4xl": "2rem",
+              "5xl": "3rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        body {
+          font-family: "Plus Jakarta Sans", sans-serif;
+        }
+      }
+      .hero-overlay {
+        background: linear-gradient(
+          to bottom,
+          rgba(26, 54, 93, 0.85),
+          rgba(26, 54, 93, 0.95)
+        );
+      }
+      .vibrant-gradient-text {
+        background: linear-gradient(135deg, #ffffff 0%, #ff6b00 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .bg-pattern-circles {
+        background-image: radial-gradient(
+          circle at 2px 2px,
+          rgba(255, 107, 0, 0.1) 1px,
+          transparent 0
+        );
+        background-size: 24px 24px;
+      }
+      .curve-decoration {
+        border-radius: 50%;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-white dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300 overflow-x-hidden"
+  >
+    <nav
+      class="fixed w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-2">
+          <div class="flex flex-col">
+            <span
+              class="text-[10px] font-black tracking-[0.2em] text-secondary uppercase"
+              >Expo Argentina</span
+            >
+            <span
+              class="text-2xl font-extrabold tracking-tighter text-primary dark:text-white flex items-center leading-none"
+            >
+              E<span class="text-secondary">X</span>A
+              <span
+                class="ml-2 text-[11px] font-bold tracking-widest text-slate-400"
+                >REGIÓN CENTRO</span
+              >
+            </span>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-bold">
+          <a class="hover:text-secondary transition-colors" href="#">Inicio</a>
+          <a class="hover:text-secondary transition-colors" href="#contact"
+            >Contacto</a
+          >
+          <a
+            class="bg-secondary text-white px-7 py-3 rounded-full hover:bg-orange-600 transition-all shadow-lg shadow-secondary/20"
+            href="#contact">Quiero ser expositor</a
+          >
+        </div>
+      </div>
+    </nav>
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+      id="hero"
+    >
+      <div
+        class="absolute -top-24 -right-24 w-[500px] h-[500px] bg-secondary opacity-10 curve-decoration"
+      >
+      </div>
+      <div
+        class="absolute -bottom-48 -left-48 w-[600px] h-[600px] bg-primary opacity-20 curve-decoration"
+      >
+      </div>
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Expo background"
+          class="w-full h-full object-cover"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFs4H8CtHBukyZN4a9TOpPUhe5Ez-2O5k_iFFL3ivaNOasbp_OBNCLADgXbR-Czr9zdHcBBUcXSb47gYesnYV_mtNFWoJwHlZekY6uaqOkUD3dDxA_VO_lp17Cx9LjlzGLFFuXCPQIKDjDhck1U_FzI9j-LkTcjY1p7QGfbXbuBeKF4lZ-9FHLDz7iQnMYqgSE9iFmI-1T-S8BNvn5eKz3ZtGqFAb5quiPsM5rsjD3NTY0PrRcQjaKPQKPDC9oU35FHuKV5bOcPls"
+        />
+        <div class="absolute inset-0 hero-overlay"></div>
+      </div>
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20">
+        <div
+          class="inline-flex items-center px-5 py-2 rounded-full bg-secondary text-white text-xs font-black mb-10 tracking-widest uppercase"
+        >
+          <span class="relative flex h-2 w-2 mr-3">
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"
+            ></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-white"
+            ></span>
+          </span>
+          Septiembre 2026 · Parque Industrial · San Lorenzo
+        </div>
+        <h1
+          class="text-7xl md:text-9xl font-black tracking-tighter text-white mb-6"
+        >
+          E<span class="text-secondary">X</span>A<span class="text-white/50"
+            >.</span
+          >
+        </h1>
+        <h2
+          class="text-3xl md:text-5xl font-extrabold text-white mb-10 leading-tight"
+        >
+          La mayor vitrina <span class="text-secondary"
+            >Industrial, Comercial e Hidrovía</span
+          > de la Región Centro.
+        </h2>
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-6"
+        >
+          <a
+            class="w-full md:w-auto px-12 py-5 bg-secondary hover:bg-orange-600 text-white rounded-2xl text-xl font-black shadow-2xl shadow-secondary/40 transition-all transform hover:scale-105"
+            href="#contact"
+          >
+            Quiero ser expositor
+          </a>
+          <a
+            class="w-full md:w-auto px-12 py-5 bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border-2 border-white/20 rounded-2xl text-xl font-bold transition-all"
+            href="#about"
+          >
+            Saber más
+          </a>
+        </div>
+      </div>
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+        <span class="material-symbols-outlined text-white/50 text-4xl"
+          >keyboard_double_arrow_down</span
+        >
+      </div>
+    </section>
+    <section class="py-32 relative bg-white dark:bg-slate-900" id="about">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+          <div class="relative">
+            <div
+              class="absolute -top-10 -left-10 w-full h-full border-4 border-secondary/20 rounded-5xl -z-10"
+            >
+            </div>
+            <div
+              class="relative overflow-hidden rounded-4xl shadow-2xl aspect-square"
+            >
+              <img
+                alt="About EXA"
+                class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7jL_PU1JEJKtfxDGjx6wnNIPmMo8W9D9RxzRokiP17z5bH0utb81tsJfd2fAkAUIit-geBc9DME1_VCL1rXd5K3TtmV32xqpbtG03j78ImAXmlpddpnQr4yY-bmNaEHetvrUcIUEqsH0m2MhLrM8Gqhdl6CpviP1kCKJN9p9d2-kWSKotBMUEVqAV-J2HUuRwdpy-aLnzF5YX0_COM59RYJI_iyGCGVfnDj-JLCJg3bpFzUg9_dkloZXQmf1fQcCf_Js7ydFIAuo"
+              />
+              <div class="absolute inset-0 bg-primary/20"></div>
+            </div>
+            <div
+              class="absolute -bottom-10 -right-10 w-40 h-40 bg-secondary rounded-full flex items-center justify-center text-white p-6 text-center leading-tight font-black rotate-12 shadow-xl"
+            >
+              SÉ PARTE DE EXA
+            </div>
+          </div>
+          <div>
+            <div class="w-20 h-1.5 bg-secondary mb-8 rounded-full"></div>
+            <h3
+              class="text-secondary font-black tracking-[0.3em] uppercase mb-4 text-sm"
+            >
+              Sobre el evento
+            </h3>
+            <h2
+              class="text-5xl md:text-6xl font-black text-primary dark:text-white mb-8 leading-tight"
+            >
+              Donde la industria se encuentra con <span class="text-secondary"
+                >el futuro</span
+              >.
+            </h2>
+            <p
+              class="text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed font-medium"
+            >
+              EXA Región Centro es el epicentro de los negocios en el corazón
+              productivo de Argentina. Un espacio diseñado para que empresas
+              líderes conecten con el futuro tecnológico y estratégico del país.
+            </p>
+            <div class="grid grid-cols-2 gap-12 pt-8">
+              <div class="border-l-4 border-secondary pl-6">
+                <span
+                  class="block text-5xl font-black text-primary dark:text-white"
+                  >+20.000</span
+                >
+                <span
+                  class="text-sm font-bold text-slate-500 uppercase tracking-widest"
+                  >m² Exposición</span
+                >
+              </div>
+              <div class="border-l-4 border-secondary pl-6">
+                <span
+                  class="block text-5xl font-black text-primary dark:text-white"
+                  >+200</span
+                >
+                <span
+                  class="text-sm font-bold text-slate-500 uppercase tracking-widest"
+                  >Stands Confirmados</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-32 bg-slate-50 dark:bg-slate-950 relative overflow-hidden"
+      id="sectors"
+    >
+      <div
+        class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full -mr-[400px] -mt-[400px]"
+      >
+      </div>
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-20">
+          <h2
+            class="text-4xl md:text-6xl font-black text-primary dark:text-white mb-6"
+          >
+            Ejes Temáticos
+          </h2>
+          <p
+            class="text-slate-500 dark:text-slate-400 font-bold tracking-widest uppercase"
+          >
+            Ecosistema productivo integral
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="group bg-white dark:bg-slate-900 p-12 rounded-[2.5rem] border-2 border-transparent hover:border-secondary transition-all duration-500 shadow-xl shadow-slate-200/50 dark:shadow-none"
+          >
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
+            >
+              <span class="material-symbols-outlined text-4xl font-light"
+                >factory</span
+              >
+            </div>
+            <h4 class="text-3xl font-black mb-4 dark:text-white">Industria</h4>
+            <p
+              class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg"
+            >
+              Innovación en manufactura, maquinaria pesada y procesos
+              automatizados para la era 4.0.
+            </p>
+          </div>
+          <div
+            class="group bg-white dark:bg-slate-900 p-12 rounded-[2.5rem] border-2 border-transparent hover:border-secondary transition-all duration-500 shadow-xl shadow-slate-200/50 dark:shadow-none"
+          >
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
+            >
+              <span class="material-symbols-outlined text-4xl font-light"
+                >storefront</span
+              >
+            </div>
+            <h4 class="text-3xl font-black mb-4 dark:text-white">Comercio</h4>
+            <p
+              class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg"
+            >
+              Retail, servicios B2B y logística avanzada integrando toda la
+              cadena de valor regional.
+            </p>
+          </div>
+          <div
+            class="group bg-white dark:bg-slate-900 p-12 rounded-[2.5rem] border-2 border-transparent hover:border-secondary transition-all duration-500 shadow-xl shadow-slate-200/50 dark:shadow-none"
+          >
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
+            >
+              <span class="material-symbols-outlined text-4xl font-light"
+                >directions_boat</span
+              >
+            </div>
+            <h4 class="text-3xl font-black mb-4 dark:text-white">Hidrovía</h4>
+            <p
+              class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg"
+            >
+              El nodo fluvial más importante de Argentina. Puertos, dragado y
+              servicios logísticos.
+            </p>
+          </div>
+          <div
+            class="group bg-white dark:bg-slate-900 p-12 rounded-[2.5rem] border-2 border-transparent hover:border-secondary transition-all duration-500 shadow-xl shadow-slate-200/50 dark:shadow-none"
+          >
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-3xl flex items-center justify-center mb-8 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
+            >
+              <span class="material-symbols-outlined text-4xl font-light"
+                >account_balance_wallet</span
+              >
+            </div>
+            <h4 class="text-3xl font-black mb-4 dark:text-white">Fintech</h4>
+            <p
+              class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg"
+            >
+              Ecosistema fintech para tu empresa: soluciones financieras de
+              última generación.
+            </p>
+          </div>
+          <div
+            class="group bg-white dark:bg-slate-900 p-12 rounded-[2.5rem] border-2 border-transparent hover:border-secondary transition-all duration-500 shadow-xl shadow-slate-200/50 dark:shadow-none md:col-span-2"
+          >
+            <div class="flex flex-col md:flex-row md:items-center gap-8">
+              <div
+                class="w-20 h-20 shrink-0 bg-primary/10 rounded-3xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"
+              >
+                <span class="material-symbols-outlined text-4xl font-light"
+                  >agriculture</span
+                >
+              </div>
+              <div>
+                <h4 class="text-3xl font-black mb-4 dark:text-white">Agro</h4>
+                <p
+                  class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg"
+                >
+                  La fuerza del campo con tecnología del futuro. Agtech y
+                  maquinaria agrícola de vanguardia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-32 relative bg-primary overflow-hidden" id="location">
+      <div class="absolute inset-0 bg-pattern-circles opacity-20"></div>
+      <div
+        class="absolute -top-24 -left-24 w-96 h-96 bg-secondary opacity-30 rounded-full blur-3xl"
+      >
+      </div>
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <span
+              class="inline-block px-5 py-2 bg-secondary text-white font-black text-xs uppercase tracking-[0.2em] rounded-full mb-8"
+              >Ubicación Estratégica</span
+            >
+            <h2
+              class="text-5xl md:text-6xl font-black text-white mb-8 leading-tight"
+            >
+              Parque Industrial <br />San Lorenzo
+            </h2>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-1"
+                >
+                  <span class="material-symbols-outlined text-secondary"
+                    >location_on</span
+                  >
+                </div>
+                <p class="text-2xl font-bold text-white">
+                  Ubicado estratégicamente sobre la autopista Rosario-Santa Fe.
+                </p>
+              </div>
+              <p class="text-xl text-slate-300 leading-relaxed">
+                Un predio de excelencia con accesos rápidos y toda la
+                infraestructura necesaria para el desarrollo de una exposición
+                de gran escala en el corazón del litoral argentino.
+              </p>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="rounded-4xl overflow-hidden border-8 border-white/10 shadow-3xl aspect-[4/3] relative group"
+            >
+              <iframe
+                allowfullscreen=""
+                class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+                loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13418.067332219717!2d-60.751333!3d-32.748333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b651910a560181%3A0xc3f8e580e04135e9!2sParque%20Industrial%20San%20Lorenzo!5e0!3m2!1sen!2sar!4v1710345678901!5m2!1sen!2sar"
+                style="border:0;"></iframe>
+              <div
+                class="absolute top-6 left-6 bg-white p-4 rounded-2xl shadow-xl"
+              >
+                <span class="text-primary font-black text-sm">CÓMO LLEGAR</span>
+              </div>
+            </div>
+            <div
+              class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-full border-4 border-primary z-20 flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined text-white text-5xl"
+                >route</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-32 bg-white dark:bg-slate-900" id="benefits">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8"
+        >
+          <div class="max-w-2xl">
+            <h3
+              class="text-secondary font-black tracking-[0.3em] uppercase mb-4 text-sm"
+            >
+              Beneficios para expositores
+            </h3>
+            <h2
+              class="text-5xl md:text-6xl font-black text-primary dark:text-white leading-tight"
+            >
+              Potencie su marca ante los <span class="text-secondary"
+                >líderes</span
+              >.
+            </h2>
+          </div>
+          <div
+            class="text-slate-400 font-bold uppercase tracking-widest text-sm border-b-2 border-secondary pb-2"
+          >
+            Edición 2026
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="p-10 rounded-[2.5rem] bg-slate-50 dark:bg-slate-800/30 border-2 border-slate-100 dark:border-slate-800 hover:border-secondary transition-all group relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:bg-secondary/10 transition-colors"
+            >
+            </div>
+            <div
+              class="w-16 h-16 rounded-2xl bg-white dark:bg-slate-700 flex items-center justify-center mb-8 shadow-md group-hover:bg-secondary group-hover:text-white transition-all transform group-hover:-translate-y-2"
+            >
+              <span class="material-symbols-outlined text-3xl">visibility</span>
+            </div>
+            <h5 class="text-2xl font-black mb-4 dark:text-white">
+              Visibilidad
+            </h5>
+            <p
+              class="text-slate-500 dark:text-slate-400 font-medium leading-relaxed"
+            >
+              Exposición ante más de 50.000 visitantes calificados del sector
+              industrial.
+            </p>
+          </div>
+          <div
+            class="p-10 rounded-[2.5rem] bg-slate-50 dark:bg-slate-800/30 border-2 border-slate-100 dark:border-slate-800 hover:border-secondary transition-all group relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:bg-secondary/10 transition-colors"
+            >
+            </div>
+            <div
+              class="w-16 h-16 rounded-2xl bg-white dark:bg-slate-700 flex items-center justify-center mb-8 shadow-md group-hover:bg-secondary group-hover:text-white transition-all transform group-hover:-translate-y-2"
+            >
+              <span class="material-symbols-outlined text-3xl">hub</span>
+            </div>
+            <h5 class="text-2xl font-black mb-4 dark:text-white">Networking</h5>
+            <p
+              class="text-slate-500 dark:text-slate-400 font-medium leading-relaxed"
+            >
+              Rondas de negocios presenciales y foros exclusivos con decisores.
+            </p>
+          </div>
+          <div
+            class="p-10 rounded-[2.5rem] bg-slate-50 dark:bg-slate-800/30 border-2 border-slate-100 dark:border-slate-800 hover:border-secondary transition-all group relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:bg-secondary/10 transition-colors"
+            >
+            </div>
+            <div
+              class="w-16 h-16 rounded-2xl bg-white dark:bg-slate-700 flex items-center justify-center mb-8 shadow-md group-hover:bg-secondary group-hover:text-white transition-all transform group-hover:-translate-y-2"
+            >
+              <span class="material-symbols-outlined text-3xl">trending_up</span
+              >
+            </div>
+            <h5 class="text-2xl font-black mb-4 dark:text-white">
+              Oportunidades
+            </h5>
+            <p
+              class="text-slate-500 dark:text-slate-400 font-medium leading-relaxed"
+            >
+              Acceso a nuevas alianzas estratégicas y expansión de cartera
+              comercial.
+            </p>
+          </div>
+          <div
+            class="p-10 rounded-[2.5rem] bg-slate-50 dark:bg-slate-800/30 border-2 border-slate-100 dark:border-slate-800 hover:border-secondary transition-all group relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 group-hover:bg-secondary/10 transition-colors"
+            >
+            </div>
+            <div
+              class="w-16 h-16 rounded-2xl bg-white dark:bg-slate-700 flex items-center justify-center mb-8 shadow-md group-hover:bg-secondary group-hover:text-white transition-all transform group-hover:-translate-y-2"
+            >
+              <span class="material-symbols-outlined text-3xl"
+                >workspace_premium</span
+              >
+            </div>
+            <h5 class="text-2xl font-black mb-4 dark:text-white">
+              Posicionamiento
+            </h5>
+            <p
+              class="text-slate-500 dark:text-slate-400 font-medium leading-relaxed"
+            >
+              Refuerce la autoridad de su marca en el mercado regional más
+              dinámico.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-24 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="relative rounded-[4rem] bg-primary overflow-hidden p-16 md:p-32"
+        >
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-pattern-circles opacity-10"
+          >
+          </div>
+          <div
+            class="absolute top-0 right-0 w-1/2 h-full bg-secondary/10 -mr-20 rounded-full blur-3xl"
+          >
+          </div>
+          <div
+            class="absolute bottom-0 left-0 w-1/2 h-full bg-white/5 -ml-20 rounded-full blur-3xl"
+          >
+          </div>
+          <div class="relative z-10 max-w-3xl text-center mx-auto">
+            <div
+              class="inline-block px-6 py-2 rounded-full bg-secondary text-white text-xs font-black uppercase tracking-[0.2em] mb-10 border-2 border-white/20"
+            >
+              Oportunidad Exclusiva
+            </div>
+            <h2
+              class="text-5xl md:text-7xl font-black text-white mb-10 leading-tight"
+            >
+              Asegura tu lugar en la preventa.
+            </h2>
+            <p
+              class="text-2xl text-slate-200 mb-12 font-medium leading-relaxed"
+            >
+              Los mejores espacios estratégicos se agotan primero. Sea parte del
+              inicio. Sea parte de EXA.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center gap-6"
+            >
+              <a
+                class="w-full sm:w-auto px-16 py-6 bg-secondary hover:bg-orange-600 text-white rounded-3xl text-2xl font-black transition-all shadow-2xl shadow-secondary/40 transform hover:scale-105 inline-block text-center"
+                href="#contact"
+              >
+                Quiero ser expositor
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="bg-slate-50 dark:bg-slate-950 pt-24 pb-12 border-t border-slate-200 dark:border-slate-800 relative overflow-hidden"
+      id="contact"
+    >
+      <div
+        class="absolute bottom-0 right-0 w-64 h-64 bg-primary opacity-5 rounded-full -mb-32 -mr-32"
+      >
+      </div>
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid md:grid-cols-4 gap-16 mb-20">
+          <div class="md:col-span-2">
+            <span
+              class="text-3xl font-black tracking-tighter text-primary dark:text-white flex items-center mb-8"
+            >
+              E<span class="text-secondary">X</span>A
+              <span
+                class="ml-3 text-[12px] font-bold tracking-[0.2em] text-slate-400 uppercase"
+                >Región Centro</span
+              >
+            </span>
+            <p
+              class="text-xl text-slate-500 dark:text-slate-400 max-w-sm mb-10 font-medium"
+            >
+              La plataforma de negocios más dinámica del país. Uniendo
+              industria, agro y tecnología.
+            </p>
+            <div class="flex space-x-5">
+              <a
+                class="w-12 h-12 rounded-2xl bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 flex items-center justify-center text-primary dark:text-white hover:bg-secondary hover:text-white hover:border-secondary transition-all"
+                href="#"
+              >
+                <span class="material-symbols-outlined">share</span>
+              </a>
+              <a
+                class="w-12 h-12 rounded-2xl bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 flex items-center justify-center text-primary dark:text-white hover:bg-secondary hover:text-white hover:border-secondary transition-all"
+                href="mailto:ventas@exaregioncentro.com"
+              >
+                <span class="material-symbols-outlined">alternate_email</span>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h6
+              class="text-primary dark:text-white font-black uppercase tracking-widest text-sm mb-8"
+            >
+              Navegación
+            </h6>
+            <ul class="space-y-5 text-slate-500 dark:text-slate-400 font-bold">
+              <li>
+                <a class="hover:text-secondary transition-colors" href="#"
+                  >Inicio</a>
+              </li>
+              <li>
+                <a
+                  class="hover:text-secondary transition-colors"
+                  href="#contact">Contacto</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h6
+              class="text-primary dark:text-white font-black uppercase tracking-widest text-sm mb-8"
+            >
+              Información
+            </h6>
+            <ul class="space-y-5 text-slate-500 dark:text-slate-400 font-bold">
+              <li class="flex items-center space-x-4">
+                <span class="material-symbols-outlined text-secondary"
+                  >mail</span
+                >
+                <span>ventas@exaregioncentro.com</span>
+              </li>
+              <li class="flex items-center space-x-4">
+                <span class="material-symbols-outlined text-secondary"
+                  >call</span
+                >
+                <span>+54 (341) 000-0000</span>
+              </li>
+              <li class="flex items-center space-x-4">
+                <span class="material-symbols-outlined text-secondary"
+                  >pin_drop</span
+                >
+                <span>San Lorenzo, Santa Fe</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-slate-200 dark:border-slate-800 pt-10 flex flex-col md:flex-row items-center justify-between gap-6"
+        >
+          <p class="text-slate-500 dark:text-slate-500 text-sm font-bold">
+            © 2024 EXA Región Centro. Liderazgo e Innovación.
+          </p>
+          <div class="flex space-x-8 text-sm font-bold text-slate-400">
+            <a class="hover:text-secondary" href="#">Términos Legales</a>
+            <a class="hover:text-secondary" href="#">Privacidad</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a
+      class="fixed bottom-8 right-8 z-50 bg-secondary text-white p-5 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center border-4 border-white"
+      href="https://wa.me/5493410000000"
+    >
+      <span class="material-symbols-outlined text-3xl">forum</span>
+    </a>
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("opacity-100", "translate-y-0");
+              entry.target.classList.remove("opacity-0", "translate-y-12");
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll("section").forEach((section) => {
+        section.classList.add(
+          "transition-all",
+          "duration-1000",
+          "opacity-0",
+          "translate-y-12",
+        );
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>
