@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "code": true,
+        "mkdir": true,
+        "touch": true,
+        "cp": true
+    }
+}

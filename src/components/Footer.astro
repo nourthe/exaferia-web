@@ -1,0 +1,230 @@
+---
+// EXA Región Centro - Footer Component
+---
+
+<footer
+  class="bg-slate-50 dark:bg-slate-950 pt-24 pb-12 border-t border-slate-200 dark:border-slate-800 relative overflow-hidden"
+  id="contact"
+>
+  <div
+    class="absolute bottom-0 right-0 w-64 h-64 bg-primary opacity-5 rounded-full -mb-32 -mr-32"
+  >
+  </div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    
+    <!-- Contact Form Section -->
+    <div class="mb-20">
+      <div class="max-w-3xl mx-auto bg-white dark:bg-slate-900 p-12 rounded-4xl border-2 border-secondary/20">
+        <h3 class="text-3xl md:text-4xl font-black text-primary dark:text-white mb-4 text-center">
+          ¿Listo para ser parte de EXA?
+        </h3>
+        <p class="text-center text-slate-600 dark:text-slate-400 mb-10 text-lg">
+          Complete el formulario y nos pondremos en contacto con usted
+        </p>
+        <form action="mailto:info@exaferia.com" method="post" enctype="text/plain" class="space-y-6">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="empresa" class="block text-sm font-black text-primary dark:text-white mb-2">
+                Empresa *
+              </label>
+              <input
+                type="text"
+                id="empresa"
+                name="empresa"
+                required
+                class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-secondary outline-none transition-colors"
+              />
+            </div>
+            <div>
+              <label for="nombre" class="block text-sm font-black text-primary dark:text-white mb-2">
+                Nombre completo *
+              </label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-secondary outline-none transition-colors"
+              />
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="cargo" class="block text-sm font-black text-primary dark:text-white mb-2">
+                Cargo o Puesto *
+              </label>
+              <input
+                type="text"
+                id="cargo"
+                name="cargo"
+                required
+                class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-secondary outline-none transition-colors"
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-black text-primary dark:text-white mb-2">
+                Correo electrónico *
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-secondary outline-none transition-colors"
+              />
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label for="telefono" class="block text-sm font-black text-primary dark:text-white mb-2">
+                Teléfono *
+              </label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-secondary outline-none transition-colors"
+              />
+            </div>
+            <div>
+              <label for="participacion" class="block text-sm font-black text-primary dark:text-white mb-2">
+                Tipo de participación *
+              </label>
+              <select
+                id="participacion"
+                name="participacion"
+                required
+                class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-secondary outline-none transition-colors"
+              >
+                <option value="">Seleccione una opción</option>
+                <option value="expositor">Expositor</option>
+                <option value="sponsor">Sponsor</option>
+                <option value="networking">Networking</option>
+              </select>
+            </div>
+          </div>
+          <div class="text-center pt-4">
+            <button
+              type="submit"
+              class="px-12 py-4 bg-secondary hover:bg-orange-600 text-white rounded-2xl text-lg font-black shadow-xl shadow-secondary/30 transition-all transform hover:scale-105"
+            >
+              Enviar consulta
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-16 mb-20">
+      <div class="md:col-span-2">
+        <span
+          class="text-3xl font-black tracking-tighter text-primary dark:text-white flex items-center mb-8"
+        >
+          E<span class="text-secondary">X</span>A
+          <span class="text-lg ml-3 text-slate-400 font-bold">2026</span>
+        </span>
+        <p
+          class="text-xl text-slate-500 dark:text-slate-400 max-w-sm mb-10 font-medium"
+        >
+          Primera Expo Industrial, Agro, Fintech, Comercial e Hidrovía de la Región Centro.
+        </p>
+        <div class="flex space-x-5">
+          <a
+            href="mailto:info@exaferia.com"
+            class="w-12 h-12 rounded-2xl bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-all"
+            aria-label="Email"
+          >
+            <span class="material-symbols-outlined">mail</span>
+          </a>
+          <a
+            href="tel:+5434174744323"
+            class="w-12 h-12 rounded-2xl bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-all"
+            aria-label="Teléfono"
+          >
+            <span class="material-symbols-outlined">call</span>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h6
+          class="text-primary dark:text-white font-black uppercase tracking-widest text-sm mb-8"
+        >
+          Navegación
+        </h6>
+        <ul class="space-y-5 text-slate-500 dark:text-slate-400 font-bold">
+          <li>
+            <a href="#hero" class="hover:text-secondary transition-colors"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="hover:text-secondary transition-colors"
+              >Sobre EXA</a
+            >
+          </li>
+          <li>
+            <a href="#sectors" class="hover:text-secondary transition-colors"
+              >Ejes Temáticos</a
+            >
+          </li>
+          <li>
+            <a href="#benefits" class="hover:text-secondary transition-colors"
+              >Beneficios</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h6
+          class="text-primary dark:text-white font-black uppercase tracking-widest text-sm mb-8"
+        >
+          Contacto
+        </h6>
+        <ul class="space-y-5 text-slate-500 dark:text-slate-400 font-bold">
+          <li>
+            <a
+              href="mailto:info@exaferia.com"
+              class="hover:text-secondary transition-colors"
+              >info@exaferia.com</a
+            >
+          </li>
+          <li>
+            <a
+              href="tel:+543417474432"
+              class="hover:text-secondary transition-colors"
+              >+54 3417 474432</a
+            >
+          </li>
+          <li class="pt-3">
+            <strong class="block text-primary dark:text-white mb-2"
+              >Ubicación</strong
+            >
+            <span class="text-sm"
+              >Parque Industrial San Lorenzo<br />Santa Fe, Argentina</span
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="border-t border-slate-200 dark:border-slate-800 pt-10 flex flex-col md:flex-row items-center justify-between gap-6"
+    >
+      <p class="text-slate-500 dark:text-slate-500 text-sm font-bold">
+        © 2026 EXA Región Centro. Todos los derechos reservados.
+      </p>
+      <div class="flex space-x-8 text-sm font-bold text-slate-400">
+        <span>Septiembre 2026 · San Lorenzo, Santa Fe</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a
+  class="fixed bottom-8 right-8 z-50 bg-secondary text-white p-5 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center border-4 border-white"
+  href="https://wa.me/543417474432"
+  aria-label="Contactar por WhatsApp"
+>
+  <span class="material-symbols-outlined text-3xl">forum</span>
+</a>

@@ -1,6 +1,7 @@
 ---
-// Under Construction page for Vinos Vaschetti
-import Layout from "../layouts/Layout.astro";
+// EXA Región Centro Landing Page
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -21,37 +22,7 @@ import Layout from "../layouts/Layout.astro";
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
-    ></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#1a365d",
-              secondary: "#ff6b00",
-              "background-light": "#ffffff",
-              "background-dark": "#0a101e",
-            },
-            fontFamily: {
-              display: ["Plus Jakarta Sans", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.75rem",
-              "4xl": "2rem",
-              "5xl": "3rem",
-            },
-          },
-        },
-      };
-    </script>
-    <style type="text/tailwindcss">
-      @layer base {
-        body {
-          font-family: "Plus Jakarta Sans", sans-serif;
-        }
-      }
+    <style is:inline>
       .hero-overlay {
         background: linear-gradient(
           to bottom,
@@ -81,41 +52,7 @@ import Layout from "../layouts/Layout.astro";
   <body
     class="bg-white dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300 overflow-x-hidden"
   >
-    <nav
-      class="fixed w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-100 dark:border-slate-800"
-    >
-      <div
-        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
-      >
-        <div class="flex items-center space-x-2">
-          <div class="flex flex-col">
-            <span
-              class="text-[10px] font-black tracking-[0.2em] text-secondary uppercase"
-              >Expo Argentina</span
-            >
-            <span
-              class="text-2xl font-extrabold tracking-tighter text-primary dark:text-white flex items-center leading-none"
-            >
-              E<span class="text-secondary">X</span>A
-              <span
-                class="ml-2 text-[11px] font-bold tracking-widest text-slate-400"
-                >REGIÓN CENTRO</span
-              >
-            </span>
-          </div>
-        </div>
-        <div class="hidden md:flex items-center space-x-8 text-sm font-bold">
-          <a class="hover:text-secondary transition-colors" href="#">Inicio</a>
-          <a class="hover:text-secondary transition-colors" href="#contact"
-            >Contacto</a
-          >
-          <a
-            class="bg-secondary text-white px-7 py-3 rounded-full hover:bg-orange-600 transition-all shadow-lg shadow-secondary/20"
-            href="#contact">Quiero ser expositor</a
-          >
-        </div>
-      </div>
-    </nav>
+    <Header />
     <section
       class="relative min-h-screen flex items-center justify-center overflow-hidden"
       id="hero"
@@ -159,9 +96,7 @@ import Layout from "../layouts/Layout.astro";
         <h2
           class="text-3xl md:text-5xl font-extrabold text-white mb-10 leading-tight"
         >
-          La mayor vitrina <span class="text-secondary"
-            >Industrial, Comercial e Hidrovía</span
-          > de la Región Centro.
+          Primera Expo <span class="text-secondary">Industrial, Agro, Fintech, Comercial e Hidrovía</span> de la Región Centro.
         </h2>
         <div
           class="flex flex-col md:flex-row items-center justify-center gap-6"
@@ -215,21 +150,22 @@ import Layout from "../layouts/Layout.astro";
             <h3
               class="text-secondary font-black tracking-[0.3em] uppercase mb-4 text-sm"
             >
-              Sobre el evento
+              La nueva exposición
             </h3>
             <h2
               class="text-5xl md:text-6xl font-black text-primary dark:text-white mb-8 leading-tight"
             >
-              Donde la industria se encuentra con <span class="text-secondary"
-                >el futuro</span
-              >.
+              Un evento que <span class="text-secondary">transforma</span> la visión industrial
             </h2>
             <p
               class="text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed font-medium"
             >
-              EXA Región Centro es el epicentro de los negocios en el corazón
-              productivo de Argentina. Un espacio diseñado para que empresas
-              líderes conecten con el futuro tecnológico y estratégico del país.
+              EXA nace para unir a los protagonistas del desarrollo productivo, impulsar vínculos estratégicos, generar oportunidades de negocio y proyectar el futuro de la región. Un espacio creado para <strong>conectar, innovar y crecer</strong>, donde empresas e instituciones se encuentran para construir relaciones de largo plazo.
+            </p>
+            <p
+              class="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed font-medium"
+            >
+              Explore la fuerza del campo con tecnologías del futuro, encuentre la agilidad financiera para su empresa y el impulso que su negocio necesita, potenciando su alcance con la hidrovía.
             </p>
             <div class="grid grid-cols-2 gap-12 pt-8">
               <div class="border-l-4 border-secondary pl-6">
@@ -293,8 +229,7 @@ import Layout from "../layouts/Layout.astro";
             <p
               class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg"
             >
-              Innovación en manufactura, maquinaria pesada y procesos
-              automatizados para la era 4.0.
+              Innovación en manufactura, maquinaria, automatización y procesos productivos que impulsan la industria 4.0.
             </p>
           </div>
           <div
@@ -311,8 +246,7 @@ import Layout from "../layouts/Layout.astro";
             <p
               class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg"
             >
-              Retail, servicios B2B y logística avanzada integrando toda la
-              cadena de valor regional.
+              Empresas, pymes y servicios B2B que integran y fortalecen la cadena de valor regional, desde el comercio hasta la logística avanzada.
             </p>
           </div>
           <div
@@ -329,8 +263,7 @@ import Layout from "../layouts/Layout.astro";
             <p
               class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg"
             >
-              El nodo fluvial más importante de Argentina. Puertos, dragado y
-              servicios logísticos.
+              El sistema fluvial más importante de Argentina: puertos, logística, dragado, transporte y servicios estratégicos para el comercio exterior.
             </p>
           </div>
           <div
@@ -347,8 +280,7 @@ import Layout from "../layouts/Layout.astro";
             <p
               class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg"
             >
-              Ecosistema fintech para tu empresa: soluciones financieras de
-              última generación.
+              Soluciones financieras de última generación para empresas: pagos, financiamiento, tecnología aplicada y nuevos modelos de negocio.
             </p>
           </div>
           <div
@@ -367,8 +299,7 @@ import Layout from "../layouts/Layout.astro";
                 <p
                   class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg"
                 >
-                  La fuerza del campo con tecnología del futuro. Agtech y
-                  maquinaria agrícola de vanguardia.
+                  La fuerza del campo con tecnología del futuro: agtech, innovación y maquinaria agrícola de vanguardia al servicio de la producción.
                 </p>
               </div>
             </div>
@@ -441,6 +372,143 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </section>
+    
+    <!-- Event Structure Section -->
+    <section class="py-32 bg-slate-50 dark:bg-slate-950" id="event-structure">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-20">
+          <h3
+            class="text-secondary font-black tracking-[0.3em] uppercase mb-4 text-sm"
+          >
+            Estructura del Evento
+          </h3>
+          <h2
+            class="text-4xl md:text-6xl font-black text-primary dark:text-white mb-6"
+          >
+            Experiencia completa para <span class="text-secondary">expositores y visitantes</span>
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl border-2 border-slate-100 dark:border-slate-800 hover:border-secondary/30 transition-all">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-secondary text-3xl">storefront</span>
+              <div>
+                <h4 class="text-xl font-black mb-2 dark:text-white">Stands de industria, comercio y servicios</h4>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl border-2 border-slate-100 dark:border-slate-800 hover:border-secondary/30 transition-all">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-secondary text-3xl">directions_boat</span>
+              <div>
+                <h4 class="text-xl font-black mb-2 dark:text-white">Sector hidrovial y logístico</h4>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl border-2 border-slate-100 dark:border-slate-800 hover:border-secondary/30 transition-all">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-secondary text-3xl">laptop</span>
+              <div>
+                <h4 class="text-xl font-black mb-2 dark:text-white">Espacios para fintech y agro</h4>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl border-2 border-slate-100 dark:border-slate-800 hover:border-secondary/30 transition-all">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-secondary text-3xl">forum</span>
+              <div>
+                <h4 class="text-xl font-black mb-2 dark:text-white">Charlas, foros y presentaciones</h4>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl border-2 border-slate-100 dark:border-slate-800 hover:border-secondary/30 transition-all">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-secondary text-3xl">handshake</span>
+              <div>
+                <h4 class="text-xl font-black mb-2 dark:text-white">Rondas de negocios y networking de alto nivel</h4>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl border-2 border-slate-100 dark:border-slate-800 hover:border-secondary/30 transition-all">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-secondary text-3xl">school</span>
+              <div>
+                <h4 class="text-xl font-black mb-2 dark:text-white">Área institucional y académica</h4>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl border-2 border-slate-100 dark:border-slate-800 hover:border-secondary/30 transition-all">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-secondary text-3xl">restaurant</span>
+              <div>
+                <h4 class="text-xl font-black mb-2 dark:text-white">Food Park y propuestas gastronómicas</h4>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-slate-900 p-8 rounded-3xl border-2 border-slate-100 dark:border-slate-800 hover:border-secondary/30 transition-all md:col-span-2">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-secondary text-3xl">celebration</span>
+              <div>
+                <h4 class="text-xl font-black mb-2 dark:text-white">Show de cierre</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-32 bg-white dark:bg-slate-900" id="services">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <h3
+              class="text-secondary font-black tracking-[0.3em] uppercase mb-4 text-sm"
+            >
+              Servicios Integrales
+            </h3>
+            <h2
+              class="text-5xl md:text-6xl font-black text-primary dark:text-white mb-8 leading-tight"
+            >
+              Llave en mano: <span class="text-secondary">todo listo</span> para su éxito
+            </h2>
+            <p
+              class="text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed"
+            >
+              Ofrecemos un servicio de diseño integral y montaje de stand, pensado para quienes buscan presencia profesional sin preocuparse por la logística o la producción. Incluye el desarrollo completo del stand: desde el concepto y diseño visual hasta la fabricación, montaje y asistencia técnica durante la feria.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-slate-50 dark:bg-slate-800/30 p-6 rounded-3xl border-2 border-slate-100 dark:border-slate-800">
+              <span class="material-symbols-outlined text-secondary text-4xl mb-4 block">campaign</span>
+              <h4 class="font-black text-lg mb-2 dark:text-white">Cartelería</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Interior y perimetral</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-800/30 p-6 rounded-3xl border-2 border-slate-100 dark:border-slate-800">
+              <span class="material-symbols-outlined text-secondary text-4xl mb-4 block">tv</span>
+              <h4 class="font-black text-lg mb-2 dark:text-white">Pantallas LED</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Alta definición</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-800/30 p-6 rounded-3xl border-2 border-slate-100 dark:border-slate-800">
+              <span class="material-symbols-outlined text-secondary text-4xl mb-4 block">description</span>
+              <h4 class="font-black text-lg mb-2 dark:text-white">Folletería</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Diseño y producción</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-800/30 p-6 rounded-3xl border-2 border-slate-100 dark:border-slate-800">
+              <span class="material-symbols-outlined text-secondary text-4xl mb-4 block">language</span>
+              <h4 class="font-black text-lg mb-2 dark:text-white">Digital</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Web, RRSS, IA</p>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-800/30 p-6 rounded-3xl border-2 border-slate-100 dark:border-slate-800 col-span-2">
+              <span class="material-symbols-outlined text-secondary text-4xl mb-4 block">shopping_bag</span>
+              <h4 class="font-black text-lg mb-2 dark:text-white">Merchandising</h4>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Productos personalizados para su marca</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="py-32 bg-white dark:bg-slate-900" id="benefits">
       <div class="max-w-7xl mx-auto px-6">
         <div
@@ -450,14 +518,12 @@ import Layout from "../layouts/Layout.astro";
             <h3
               class="text-secondary font-black tracking-[0.3em] uppercase mb-4 text-sm"
             >
-              Beneficios para expositores
+              ¿Por qué participar?
             </h3>
             <h2
               class="text-5xl md:text-6xl font-black text-primary dark:text-white leading-tight"
             >
-              Potencie su marca ante los <span class="text-secondary"
-                >líderes</span
-              >.
+              Potencie su marca ante los <span class="text-secondary">líderes del sector</span>
             </h2>
           </div>
           <div
@@ -584,13 +650,12 @@ import Layout from "../layouts/Layout.astro";
             <h2
               class="text-5xl md:text-7xl font-black text-white mb-10 leading-tight"
             >
-              Asegura tu lugar en la preventa.
+              Asegurá tu lugar en la preventa exclusiva
             </h2>
             <p
               class="text-2xl text-slate-200 mb-12 font-medium leading-relaxed"
             >
-              Los mejores espacios estratégicos se agotan primero. Sea parte del
-              inicio. Sea parte de EXA.
+              Ya se encuentra abierta la preventa exclusiva de stands, con beneficios especiales y acceso a las mejores ubicaciones dentro del predio. Una decisión estratégica para garantizar el retorno de tu inversión.
             </p>
             <div
               class="flex flex-col sm:flex-row items-center justify-center gap-6"
@@ -606,112 +671,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </section>
-    <footer
-      class="bg-slate-50 dark:bg-slate-950 pt-24 pb-12 border-t border-slate-200 dark:border-slate-800 relative overflow-hidden"
-      id="contact"
-    >
-      <div
-        class="absolute bottom-0 right-0 w-64 h-64 bg-primary opacity-5 rounded-full -mb-32 -mr-32"
-      >
-      </div>
-      <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="grid md:grid-cols-4 gap-16 mb-20">
-          <div class="md:col-span-2">
-            <span
-              class="text-3xl font-black tracking-tighter text-primary dark:text-white flex items-center mb-8"
-            >
-              E<span class="text-secondary">X</span>A
-              <span
-                class="ml-3 text-[12px] font-bold tracking-[0.2em] text-slate-400 uppercase"
-                >Región Centro</span
-              >
-            </span>
-            <p
-              class="text-xl text-slate-500 dark:text-slate-400 max-w-sm mb-10 font-medium"
-            >
-              La plataforma de negocios más dinámica del país. Uniendo
-              industria, agro y tecnología.
-            </p>
-            <div class="flex space-x-5">
-              <a
-                class="w-12 h-12 rounded-2xl bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 flex items-center justify-center text-primary dark:text-white hover:bg-secondary hover:text-white hover:border-secondary transition-all"
-                href="#"
-              >
-                <span class="material-symbols-outlined">share</span>
-              </a>
-              <a
-                class="w-12 h-12 rounded-2xl bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 flex items-center justify-center text-primary dark:text-white hover:bg-secondary hover:text-white hover:border-secondary transition-all"
-                href="mailto:ventas@exaregioncentro.com"
-              >
-                <span class="material-symbols-outlined">alternate_email</span>
-              </a>
-            </div>
-          </div>
-          <div>
-            <h6
-              class="text-primary dark:text-white font-black uppercase tracking-widest text-sm mb-8"
-            >
-              Navegación
-            </h6>
-            <ul class="space-y-5 text-slate-500 dark:text-slate-400 font-bold">
-              <li>
-                <a class="hover:text-secondary transition-colors" href="#"
-                  >Inicio</a>
-              </li>
-              <li>
-                <a
-                  class="hover:text-secondary transition-colors"
-                  href="#contact">Contacto</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h6
-              class="text-primary dark:text-white font-black uppercase tracking-widest text-sm mb-8"
-            >
-              Información
-            </h6>
-            <ul class="space-y-5 text-slate-500 dark:text-slate-400 font-bold">
-              <li class="flex items-center space-x-4">
-                <span class="material-symbols-outlined text-secondary"
-                  >mail</span
-                >
-                <span>ventas@exaregioncentro.com</span>
-              </li>
-              <li class="flex items-center space-x-4">
-                <span class="material-symbols-outlined text-secondary"
-                  >call</span
-                >
-                <span>+54 (341) 000-0000</span>
-              </li>
-              <li class="flex items-center space-x-4">
-                <span class="material-symbols-outlined text-secondary"
-                  >pin_drop</span
-                >
-                <span>San Lorenzo, Santa Fe</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          class="border-t border-slate-200 dark:border-slate-800 pt-10 flex flex-col md:flex-row items-center justify-between gap-6"
-        >
-          <p class="text-slate-500 dark:text-slate-500 text-sm font-bold">
-            © 2024 EXA Región Centro. Liderazgo e Innovación.
-          </p>
-          <div class="flex space-x-8 text-sm font-bold text-slate-400">
-            <a class="hover:text-secondary" href="#">Términos Legales</a>
-            <a class="hover:text-secondary" href="#">Privacidad</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <a
-      class="fixed bottom-8 right-8 z-50 bg-secondary text-white p-5 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center border-4 border-white"
-      href="https://wa.me/5493410000000"
-    >
-      <span class="material-symbols-outlined text-3xl">forum</span>
-    </a>
+    <Footer />
     <script>
       const observer = new IntersectionObserver(
         (entries) => {
