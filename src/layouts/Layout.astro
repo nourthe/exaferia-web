@@ -65,6 +65,9 @@ const locale = "es_AR";
     <!-- Fonts -->
     <link rel="stylesheet" href="/styles/fonts.css" />
     
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
     <!-- Structured data for EXA event -->
     <script type="application/ld+json" is:inline>
       {JSON.stringify({
@@ -109,5 +112,11 @@ const locale = "es_AR";
   </head>
   <body>
     <slot />
+    <script is:inline>
+      // Initialize Lucide icons
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    </script>
   </body>
 </html>
