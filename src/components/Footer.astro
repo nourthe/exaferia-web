@@ -19,9 +19,9 @@
           ¿Listo para ser parte de EXA?
         </h3>
         <p class="text-center text-slate-600 dark:text-slate-400 mb-10 text-lg">
-          Complete el formulario y nos pondremos en contacto con usted
+          Completá el formulario y nos pondremos en contacto
         </p>
-        <form action="mailto:info@exaferia.com" method="post" enctype="text/plain" class="space-y-6">
+        <form action="#" method="post" class="space-y-6" id="contact-form">
           <div class="grid md:grid-cols-2 gap-6">
             <div>
               <label for="empresa" class="block text-sm font-black text-primary dark:text-white mb-2">
@@ -74,35 +74,30 @@
               />
             </div>
           </div>
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <label for="telefono" class="block text-sm font-black text-primary dark:text-white mb-2">
-                Teléfono *
-              </label>
-              <input
-                type="tel"
-                id="telefono"
-                name="telefono"
-                required
-                class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-secondary outline-none transition-colors"
-              />
-            </div>
-            <div>
-              <label for="participacion" class="block text-sm font-black text-primary dark:text-white mb-2">
-                Tipo de participación *
-              </label>
-              <select
-                id="participacion"
-                name="participacion"
-                required
-                class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-secondary outline-none transition-colors"
-              >
-                <option value="">Seleccione una opción</option>
-                <option value="expositor">Expositor</option>
-                <option value="sponsor">Sponsor</option>
-                <option value="networking">Networking</option>
-              </select>
-            </div>
+          <div>
+            <label for="telefono" class="block text-sm font-black text-primary dark:text-white mb-2">
+              Teléfono *
+            </label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              required
+              class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-secondary outline-none transition-colors"
+            />
+          </div>
+          <div>
+            <label for="mensaje" class="block text-sm font-black text-primary dark:text-white mb-2">
+              Contanos qué te interesa (expositor, sponsor, consulta general, etc.) *
+            </label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              required
+              rows="4"
+              placeholder="Ejemplo: Me interesa ser expositor del sector industrial, quisiera conocer más sobre los espacios disponibles..."
+              class="w-full px-4 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-800 focus:border-secondary outline-none transition-colors resize-none"
+            ></textarea>
           </div>
           <div class="text-center pt-4">
             <button
@@ -143,6 +138,15 @@
             aria-label="Teléfono"
           >
             <span class="material-symbols-outlined">call</span>
+          </a>
+          <a
+            href="https://wa.me/543417474432"
+            class="w-12 h-12 rounded-2xl bg-primary/10 hover:bg-primary text-primary hover:text-white flex items-center justify-center transition-all"
+            aria-label="WhatsApp"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="material-symbols-outlined">chat</span>
           </a>
         </div>
       </div>
